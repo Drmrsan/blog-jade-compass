@@ -1,0 +1,58 @@
+
+
+-# = link_to "New Post", new_post_path
+
+
+#main
+	.wrapper
+		.about-section
+			%h2 About Me
+			%hr/
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus autem omnis nulla sit reiciendis. Voluptas magnam nam voluptatum hic corporis eveniet laboriosam neque voluptatem, recusandae dolorem deserunt facere nulla quasi!
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus autem omnis nulla sit reiciendis. Voluptas magnam nam voluptatum hic corporis eveniet laboriosam neque voluptatem, recusandae dolorem deserunt facere nulla quasi!
+			
+			%p.index
+				%a.button{:href => "#"} More
+
+		.project-section
+			%h2 Projects
+			%hr/
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus autem omnis nulla sit reiciendis. Voluptas magnam nam voluptatum hic corporis eveniet laboriosam neque voluptatem, recusandae dolorem deserunt facere nulla quasi!
+			%p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus autem omnis nulla sit reiciendis. Voluptas magnam nam voluptatum hic corporis eveniet laboriosam neque voluptatem, recusandae dolorem deserunt facere nulla quasi!
+			
+			%p.index
+				%a.button{:href => "#"} More
+
+		.blog-section
+			%h2 Blog Posts
+			%hr/
+			
+			- @posts.each do |post|
+				.post-link
+					.fa.fa-angle-double-right
+
+					= link_to post.title, post_path(post)
+				
+			%p.index
+				%a.button{:href => "#"} All posts
+
+	
+%footer
+	.wrapper
+		.social-icons
+			%a{:href => "#"}
+				.fa.fa-facebook
+				
+			%a{:href => "#"}
+				.fa.fa-google-plus
+				
+			%a{:href => "#"}
+				.fa.fa-twitter
+		
+		.copyright
+			%p Copyright &copy; Drmrsan 2016
+
+
+
+
+
